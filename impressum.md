@@ -1,36 +1,35 @@
 # Impressum
 Informationen über den Diensteanbieter.
 
-TaleFrog Solutions e.U.
+## TaleFrog Solutions e.U.
 
+**Adresse:**
 Hillerstraße 12, Stiege 3 Tür 2,
 1020 Wien,
 Österreich
 
 **Tel.:** 0676/3974525
-E-Mail: office@talefrog.eu
+**E-Mail:** office@talefrog.eu
 
-**Firmenbuchnummer:** 663670k
-**Firmenbuchgericht:** Wien
-**Firmensitz:** 1020 Wien
-**Unternehmensgegenstand:** IT Dienstleistungen
-**UID-Nummer:** <folgt>
-**GLN (Global Location Number):** <folgt>
-**GISA (Gewerbeinformationssystem Austria):** <folgt>
-**Mitglied bei:** <folgt>
-**Berufsrecht:** www.ris.bka.gv.at
-
-**Aufsichtsbehörde/Gewerbebehörde:** Bezirkshauptmannschaft Wien
-**Webseite:** <folgt>
-**Anschrift:** <folgt>
-
-**Berufsbezeichnung:** IT-Beratung, KI-Beratung, Erstellung von Softwarelösungen
+* **Firmenbuchnummer:** 663670k
+* **Firmenbuchgericht:** Wien
+* **Firmensitz:** 1020 Wien
+* **Unternehmensgegenstand:** IT Dienstleistungen
+* **UID-Nummer:** <folgt>
+* **GLN (Global Location Number):** <folgt>
+* **GISA (Gewerbeinformationssystem Austria):** <folgt>
+* **Mitglied bei:** <folgt>
+* **Berufsrecht:** www.ris.bka.gv.at
+* **Aufsichtsbehörde/Gewerbebehörde:** Bezirkshauptmannschaft Wien
+* **Webseite:** <folgt>
+* **Anschrift:** <folgt>
+* **Berufsbezeichnung:** IT-Beratung, KI-Beratung, Erstellung von Softwarelösungen
 
 ## Audiovisuelle Mediendienste
 **Zuständige Regulierungs- bzw. Aufsichtsbehörde:** Kommunikationsbehörde Austria (KommAustria), https://www.rtr.at
 
 ## Jugendschutzbeauftragter
-**E-Mail:** nico.spataro@talefrog.eu
+**E-Mail:** office@talefrog.eu
 
 ## EU-Streitschlichtung
 Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Online-Streitbeilegungsplattform (OS-Plattform) informieren.
