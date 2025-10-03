@@ -18,6 +18,109 @@
         .bg-logo-green {
             background-color: #22c55e;
         }
+
+        /* --- CSS für den Cookie-Warner --- */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333; /* Dunkler Hintergrund */
+            color: #fff; /* Weiße Schrift */
+            padding: 15px 20px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: none; /* Standardmäßig ausgeblendet */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        #cookie-banner h3 {
+            margin-top: 0;
+            color: #4CAF50; /* Akzentfarbe für den Titel */
+            font-size: 1.4em;
+        }
+
+        #cookie-banner p {
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        #cookie-banner a {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+
+        #cookie-banner .buttons {
+            margin-top: 15px;
+            display: flex; /* Buttons nebeneinander */
+            flex-wrap: wrap; /* Umbruch auf kleineren Bildschirmen */
+            justify-content: center;
+            gap: 10px; /* Abstand zwischen den Buttons */
+        }
+
+        #cookie-banner button {
+            background-color: #4CAF50; /* Akzentfarbe für Buttons */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            white-space: nowrap; /* Verhindert Zeilenumbruch im Buttontext */
+        }
+
+        #cookie-banner button:hover {
+            background-color: #45a049; /* Dunkler bei Hover */
+        }
+
+        #cookie-banner #customize-settings-container {
+            text-align: left;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #444; /* Etwas hellerer Hintergrund für Einstellungen */
+            border-radius: 8px;
+            display: none; /* Standardmäßig ausgeblendet */
+        }
+
+        #cookie-banner #customize-settings-container label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        #cookie-banner #customize-settings-container input[type="checkbox"] {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        #cookie-banner #customize-settings-container .category-description {
+            font-size: 0.8em;
+            color: #ccc;
+            margin-left: 25px;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+
+        #cookie-banner #customize-settings-container .settings-buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end; /* Buttons rechtsbündig */
+            gap: 10px;
+        }
+
+        #cookie-banner #customize-settings-container .settings-buttons button {
+            background-color: #007bff; /* Eigene Farbe für Einstellungs-Buttons */
+        }
+
+        #cookie-banner #customize-settings-container .settings-buttons button:hover {
+            background-color: #0056b3;
+        }
+
     </style>
 </head>
 <body>
@@ -194,5 +297,267 @@
         </div>
     </footer>
 
+    <!-- Der Cookie-Warner HTML-Container -->
+    <div id="cookie-banner">
+        <h3>Ihre Privatsphäre ist uns wichtig!</h3>
+        <p>
+            Wir nutzen Cookies und ähnliche Technologien, um Ihnen die bestmögliche Nutzung unserer Webseite zu ermöglichen,
+            unsere Inhalte zu personalisieren und die Zugriffe auf unsere Webseite zu analysieren.
+            Einige dieser Cookies sind technisch notwendig und für den Betrieb der Webseite unerlässlich.
+            Andere Cookies helfen uns, Ihr Nutzererlebnis zu verbessern und zu verstehen, wie Sie unsere Webseite nutzen.
+        </p>
+        <p>
+            Für die Nutzung bestimmter Dienste und Funktionen (z.B. eingebettete Videos, Karten, Analyse-Tools)
+            benötigen wir Ihre Einwilligung zur Verarbeitung Ihrer Daten. Ihre Einwilligung ist freiwillig und kann jederzeit
+            mit Wirkung für die Zukunft widerrufen werden.
+        </p>
+
+        <div class="buttons">
+            <button id="accept-all-cookies">Alle Cookies akzeptieren</button>
+            <button id="customize-cookies">Einstellungen anpassen</button>
+            <button id="accept-necessary-cookies">Nur notwendige Cookies akzeptieren</button>
+        </div>
+
+        <div id="customize-settings-container">
+            <h4>Cookie-Einstellungen</h4>
+
+            <label>
+                <input type="checkbox" id="necessary-cookies-checkbox" checked disabled> Notwendige Cookies
+                <span class="category-description">Diese Cookies sind für das Funktionieren der Webseite unbedingt erforderlich und können nicht deaktiviert werden.</span>
+            </label>
+
+            <label>
+                <input type="checkbox" id="analytics-cookies-checkbox"> Performance & Analyse-Cookies
+                <span class="category-description">Diese Cookies helfen uns, die Leistung und Nutzung unserer Webseite zu messen und zu verbessern.</span>
+            </label>
+
+            <label>
+                <input type="checkbox" id="functional-cookies-checkbox"> Funktionale Cookies
+                <span class="category-description">Diese Cookies ermöglichen erweiterte Funktionen und Personalisierung, z.B. für Videos oder interaktive Karten.</span>
+            </label>
+
+            <label>
+                <input type="checkbox" id="marketing-cookies-checkbox"> Marketing & Targeting-Cookies
+                <span class="category-description">Diese Cookies können von Werbepartnern gesetzt werden, um Ihnen relevante Werbung anzuzeigen.</span>
+            </label>
+
+            <div class="settings-buttons">
+                <button id="save-settings">Auswahl speichern</button>
+                <button id="cancel-settings">Abbrechen</button>
+            </div>
+        </div>
+
+        <p class="links">
+            <a href="[Link zur Datenschutzerklärung]" target="_blank">Datenschutzerklärung</a> |
+            <a href="[Link zum Impressum]" target="_blank">Impressum</a>
+        </p>
+    </div>
+
+    <script>
+        // --- JavaScript für den Cookie-Warner ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptAllBtn = document.getElementById('accept-all-cookies');
+            const customizeBtn = document.getElementById('customize-cookies');
+            const acceptNecessaryBtn = document.getElementById('accept-necessary-cookies');
+            const customizeSettingsContainer = document.getElementById('customize-settings-container');
+            const saveSettingsBtn = document.getElementById('save-settings');
+            const cancelSettingsBtn = document.getElementById('cancel-settings');
+
+            const analyticsCheckbox = document.getElementById('analytics-cookies-checkbox');
+            const functionalCheckbox = document.getElementById('functional-cookies-checkbox');
+            const marketingCheckbox = document.getElementById('marketing-cookies-checkbox');
+            const youtubeEmbed = document.getElementById('youtube-embed'); // Für das Beispiel-Video
+
+            // Hilfsfunktion zum Setzen eines Cookies
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+            }
+
+            // Hilfsfunktion zum Auslesen eines Cookies
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Hilfsfunktion zum Löschen eines Cookies
+            function eraseCookie(name) {
+                document.cookie = name + '=; Max-Age=-99999999; path=/; SameSite=Lax';
+            }
+
+            // Initialen Status laden oder Banner anzeigen
+            const consentCookie = getCookie('cookie_consent');
+
+            function applyConsent(consent) {
+                // Hier müssten Sie die Logik für das Laden/Blockieren von Drittanbieter-Skripten implementieren
+                // Beispiel: Google Analytics (ersetzen Sie 'YOUR_GA_TRACKING_ID' mit Ihrer ID)
+                const gaTrackingId = 'YOUR_GA_TRACKING_ID'; // <--- HIER ANPASSEN!
+
+                // Google Analytics Skript
+                if (consent.analytics && gaTrackingId && gaTrackingId !== 'YOUR_GA_TRACKING_ID') {
+                    // Prüfen, ob GA bereits geladen ist, um Duplikate zu vermeiden
+                    if (!window.ga && !window.GoogleAnalyticsObject) {
+                        const script = document.createElement('script');
+                        script.async = true;
+                        script.src = `https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`;
+                        document.head.appendChild(script);
+
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', gaTrackingId);
+                        console.log('Google Analytics geladen.');
+                    }
+                } else {
+                    // Wenn Analytics nicht zugestimmt wurde, vorhandene GA-Cookies löschen
+                    // (Dies ist eine einfache Methode, für die vollständige Compliance muss das Skript selbst blockiert werden)
+                    eraseCookie('_ga');
+                    eraseCookie('_gid');
+                    eraseCookie('_gat');
+                    console.log('Google Analytics nicht geladen oder Cookies gelöscht.');
+                }
+
+                // Beispiel: Youtube Embed
+                if (consent.functional && youtubeEmbed) {
+                    youtubeEmbed.style.display = 'block';
+                    console.log('YouTube Embed aktiviert.');
+                } else if (youtubeEmbed) {
+                    youtubeEmbed.style.display = 'none';
+                    console.log('YouTube Embed deaktiviert.');
+                }
+            }
+
+            if (!consentCookie) {
+                // Wenn noch keine Einwilligung vorliegt, Banner anzeigen
+                cookieBanner.style.display = 'block';
+            } else {
+                // Wenn Einwilligung vorhanden, entsprechende Skripte laden
+                try {
+                    const consent = JSON.parse(consentCookie);
+                    applyConsent(consent);
+                    console.log('Bestehende Cookie-Einwilligung geladen:', consent);
+                } catch (e) {
+                    console.error('Fehler beim Parsen des Cookie-Einwilligungs-Cookies:', e);
+                    // Falls Fehler beim Parsen, Banner erneut anzeigen
+                    cookieBanner.style.display = 'block';
+                }
+            }
+
+            // Event Listener für "Alle Cookies akzeptieren"
+            acceptAllBtn.addEventListener('click', () => {
+                const consent = {
+                    necessary: true,
+                    analytics: true,
+                    functional: true,
+                    marketing: true
+                };
+                setCookie('cookie_consent', JSON.stringify(consent), 365); // 1 Jahr Gültigkeit
+                applyConsent(consent);
+                cookieBanner.style.display = 'none';
+                console.log('Alle Cookies akzeptiert.');
+            });
+
+            // Event Listener für "Nur notwendige Cookies akzeptieren"
+            acceptNecessaryBtn.addEventListener('click', () => {
+                const consent = {
+                    necessary: true,
+                    analytics: false,
+                    functional: false,
+                    marketing: false
+                };
+                setCookie('cookie_consent', JSON.stringify(consent), 365);
+                applyConsent(consent);
+                cookieBanner.style.display = 'none';
+                console.log('Nur notwendige Cookies akzeptiert.');
+            });
+
+            // Event Listener für "Einstellungen anpassen"
+            customizeBtn.addEventListener('click', () => {
+                // Standardwerte setzen, basierend auf aktuellem Consent oder deaktiviert
+                const currentConsent = getCookie('cookie_consent');
+                let consentState = {
+                    necessary: true, // Notwendig ist immer aktiv
+                    analytics: false,
+                    functional: false,
+                    marketing: false
+                };
+                if (currentConsent) {
+                    try {
+                        const parsedConsent = JSON.parse(currentConsent);
+                        consentState = { ...consentState, ...parsedConsent };
+                    } catch (e) { /* ignore */ }
+                }
+
+                analyticsCheckbox.checked = consentState.analytics;
+                functionalCheckbox.checked = consentState.functional;
+                marketingCheckbox.checked = consentState.marketing;
+
+                customizeSettingsContainer.style.display = 'block';
+                // Optional: Die Hauptbuttons ausblenden, wenn die Einstellungen geöffnet sind
+                acceptAllBtn.style.display = 'none';
+                customizeBtn.style.display = 'none';
+                acceptNecessaryBtn.style.display = 'none';
+            });
+
+            // Event Listener für "Auswahl speichern"
+            saveSettingsBtn.addEventListener('click', () => {
+                const consent = {
+                    necessary: true,
+                    analytics: analyticsCheckbox.checked,
+                    functional: functionalCheckbox.checked,
+                    marketing: marketingCheckbox.checked
+                };
+                setCookie('cookie_consent', JSON.stringify(consent), 365);
+                applyConsent(consent);
+                cookieBanner.style.display = 'none';
+                console.log('Cookie-Einstellungen gespeichert:', consent);
+            });
+
+            // Event Listener für "Abbrechen" in den Einstellungen
+            cancelSettingsBtn.addEventListener('click', () => {
+                customizeSettingsContainer.style.display = 'none';
+                // Hauptbuttons wieder einblenden
+                acceptAllBtn.style.display = 'inline-block';
+                customizeBtn.style.display = 'inline-block';
+                acceptNecessaryBtn.style.display = 'inline-block';
+                console.log('Cookie-Einstellungen abgebrochen.');
+                // Wenn zuvor kein Consent gesetzt war, muss das Banner wieder sichtbar sein
+                if (!getCookie('cookie_consent')) {
+                    cookieBanner.style.display = 'block';
+                } else {
+                    cookieBanner.style.display = 'none'; // Wenn bereits Consent, Banner ausblenden
+                }
+            });
+
+            // Funktion zum Anzeigen des Cookie-Banners, z.B. wenn der Nutzer seine Zustimmung ändern möchte
+            // Sie könnten einen Link "Cookie-Einstellungen ändern" auf Ihrer Seite platzieren, der diese Funktion aufruft
+            window.showCookieConsentBanner = function() {
+                cookieBanner.style.display = 'block';
+                customizeSettingsContainer.style.display = 'none'; // Einstellungen erst mal ausblenden
+                // Hauptbuttons wieder einblenden
+                acceptAllBtn.style.display = 'inline-block';
+                customizeBtn.style.display = 'inline-block';
+                acceptNecessaryBtn.style.display = 'inline-block';
+            };
+            // Für Testzwecke: Ein Button, der das Banner wieder anzeigt
+            // const changeConsentBtn = document.createElement('button');
+            // changeConsentBtn.textContent = 'Cookie-Einstellungen ändern';
+            // changeConsentBtn.style.cssText = 'position: fixed; top: 10px; right: 10px; z-index: 1001; padding: 5px 10px;';
+            // changeConsentBtn.addEventListener('click', showCookieConsentBanner);
+            // document.body.appendChild(changeConsentBtn);
+        });
+    </script>
 </body>
 </html>
